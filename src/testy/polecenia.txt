@@ -1,6 +1,8 @@
 1. Dla przygotowanych klas związanych z symulatorem aplikacji pogodowej przygotuj odpowiednie testy jednostkowe:
+
       - Przetestuj klasę URL Parser w taki sposób, aby pokryć wszystkie możliwe ścieżki. Czy kod zawiera błędy? Czy wszystkie
       możliwości zostały wzięte pod uwagę?
+
       - Przetestuj klasę Weather Downloader w taki sposób, aby uzyskać pełne pokrycie metod getByCityName oraz getByCoordinates.
       Jakie problemy musiałeś rozwiązać aby to było możliwe? Jakie błędy popełnił twórca tej klasy?
 

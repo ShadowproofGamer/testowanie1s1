@@ -8,8 +8,8 @@ public class WeatherDownloader {
 
     WeatherDownloadWorker weatherDownloadWorker;
 
-    //Dodaję dodatkowy konstruktor aby mieć możliwość podmiany WeatherDownloadWorker()
-    WeatherDownloader(WeatherDownloadWorker weatherDownloadWorker){
+    //Dodaję dodatkowy konstruktor aby mieć możliwość podmiany WeatherDownloadWorker
+    public WeatherDownloader(WeatherDownloadWorker weatherDownloadWorker){
         this.weatherDownloadWorker = weatherDownloadWorker;
     }
     //
@@ -17,7 +17,8 @@ public class WeatherDownloader {
         weatherDownloadWorker = new WeatherDownloadWorker();
     }
 
-    WeatherObject getByCityName(UrlObject urlObject) {
+    //dodaję public
+    public WeatherObject getByCityName(UrlObject urlObject) {
         if (urlObject.getParameters().containsKey("city")) {
             if (weatherDownloadWorker.downloadData()) {
                 return new WeatherObject(getWeather(), getTemperature(), getPressure(), getHumidity());
@@ -29,7 +30,8 @@ public class WeatherDownloader {
         }
     }
 
-    WeatherObject getByCoordinates(UrlObject urlObject) {
+    //dodaję public
+    public WeatherObject getByCoordinates(UrlObject urlObject) {
         if (urlObject.getParameters().containsKey("lon") && urlObject.getParameters().containsKey("lat")) {
             if (weatherDownloadWorker.downloadData()) {
                 return new WeatherObject(getWeather(), getTemperature(), getPressure(), getHumidity());

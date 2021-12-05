@@ -9,6 +9,9 @@ import static org.junit.Assert.assertEquals;
 public class TestUrlParser {
     private UrlParser urlParser;
 
+    //1) By city: http://getmyweather.com/byCity?city={cityName}
+    //2) By coordinates: http://getmyweather.com/byCoordinates?lat={lat}&lon={lon}
+    //Enter url to download weather:
     @Test(expected = RuntimeException.class)
     public void testUrlParseInvalid0() {
         this.urlParser = new UrlParser();
@@ -16,9 +19,6 @@ public class TestUrlParser {
         System.out.println("Test nr 1. " + " Parameters: " + urlObject.getParameters() + " Path: " + urlObject.getPath() + " FullAddress: " + urlObject.getFullAddress() + " Scheme: " + urlObject.getScheme() + " Class: " + urlObject.getClass());
     }
 
-    //1) By city: http://getmyweather.com/byCity?city={cityName}
-    //2) By coordinates: http://getmyweather.com/byCoordinates?lat={lat}&lon={lon}
-    //Enter url to download weather:
     @Test
     public void testUrlParseValid() {
         this.urlParser = new UrlParser();

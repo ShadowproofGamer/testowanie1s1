@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class WeatherDownloadWorker {
 
-    boolean downloadData() {
+    //dodane public
+    public boolean downloadData() {
         Random r = new Random();
         try {
             Thread.sleep(1000);
