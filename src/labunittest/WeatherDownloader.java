@@ -8,6 +8,11 @@ public class WeatherDownloader {
 
     WeatherDownloadWorker weatherDownloadWorker;
 
+    //Dodaję dodatkowy konstruktor aby mieć możliwość podmiany WeatherDownloadWorker()
+    WeatherDownloader(WeatherDownloadWorker weatherDownloadWorker){
+        this.weatherDownloadWorker = weatherDownloadWorker;
+    }
+    //
     WeatherDownloader() {
         weatherDownloadWorker = new WeatherDownloadWorker();
     }

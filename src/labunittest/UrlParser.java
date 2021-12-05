@@ -9,7 +9,8 @@ public class UrlParser {
 
     private String urlToParse;
 
-    UrlObject parseUrl(String url) {
+    //poniżej brakowało słowa kluczowego public czyli zasięg był protected
+    public UrlObject parseUrl(String url) {
         this.urlToParse = url;
         UrlObject urlObject = new UrlObject();
         urlObject.setScheme(parseScheme(urlToParse));
