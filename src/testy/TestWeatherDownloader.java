@@ -89,3 +89,10 @@ public class TestWeatherDownloader {
 
     }
 }
+
+/*
+Kod ma/miał następujące problemy:
+1. Trzeba było napisać nowy konstruktor klasy WeatherDownloader aby możliwe było jej właściwe testowanie.
+2. Brak możliwości łatwego sprawdzenia prawidłowości pól klasy
+
+ */
